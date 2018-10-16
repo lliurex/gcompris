@@ -1,0 +1,12 @@
+gcompris-qt source: insane-line-length-in-source-file src/activities/clickanddraw/clickanddraw_dataset.js line length is 711 characters (>512)
+gcompris-qt source: source-contains-prebuilt-javascript-object src/activities/clickanddraw/clickanddraw_dataset.js line length is 703 characters (>512)
+gcompris-qt source: source-is-missing src/activities/clickanddraw/clickanddraw_dataset.js line length is 703 characters (>512)
+gcompris-qt source: insane-line-length-in-source-file src/activities/number_sequence/number_sequence_dataset.js line length is 711 characters (>512)
+gcompris-qt source: source-contains-prebuilt-javascript-object src/activities/number_sequence/number_sequence_dataset.js line length is 703 characters (>512)
+gcompris-qt source: source-is-missing src/activities/number_sequence/number_sequence_dataset.js line length is 703 characters (>512)
+
+# Doesn't have autopkgtests
+gcompris-qt source: testsuite-autopkgtest-missing
+
+# There's no alternative HTTPS download location at the moment, override
+gcompris-qt source: debian-watch-uses-insecure-uri http://gcompris.net/download/qt/src/gcompris-qt-([\d.]+).tar.xz

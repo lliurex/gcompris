@@ -1,0 +1,63 @@
+Source: gcompris-qt
+Section: education
+Priority: optional
+Maintainer: Debian Qt Extras Team <debian-qt-kde@lists.debian.org>
+Uploaders: Simon Quigley <tsimonq2@ubuntu.com>
+Build-Depends: cmake,
+               debhelper (>= 11),
+               extra-cmake-modules,
+               libkf5doctools-dev,
+               libqt5sensors5-dev,
+               libqt5svg5-dev,
+               libqt5xmlpatterns5-dev,
+               pkg-kde-tools,
+               qml-module-qtgraphicaleffects,
+               qml-module-qtmultimedia,
+               qt5-qmake,
+               qtdeclarative5-dev,
+               qtmultimedia5-dev,
+               qttools5-dev,
+               qttools5-dev-tools
+Standards-Version: 4.1.4
+Homepage: http://gcompris.net/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde-extras/gcompris-qt
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/gcompris-qt.git
+
+Package: gcompris-qt
+Architecture: any
+Depends: gcompris-qt-data (= ${source:Version}),
+         libqt5multimedia5-plugins,
+         qml-module-qtgraphicaleffects,
+         qml-module-qtmultimedia,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-particles2,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Educational games for small children - Qt rewrite
+ A large collection of educational games for small children, designed
+ to be a unified interface to integrate more educational games.
+ .
+ This is the rewrite of GCompris using Qt Quick technology.
+
+Package: gcompris-qt-data
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Recommends: gcompris-qt
+Description: data files for gcompris-qt
+ GCompris is a collection of educational games for small children.
+ .
+ This package contains the definitions of these standard boards, along
+ with associated images.
+
+Package: gcompris
+Architecture: all
+Section: oldlibs
+Depends: gcompris-qt, ${misc:Depends}
+Description: Educational games for small children - transitional package
+ A large collection of educational games for small children, designed
+ to be a unified interface to integrate more educational games.
+ .
+ This is a transitional package that depends on the new series of GCompris
+ releases (rewritten using Qt). It can be safely removed once gcompris-qt is
+ installed.

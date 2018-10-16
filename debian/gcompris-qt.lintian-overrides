@@ -1,0 +1,5 @@
+# GCompris is an eductional game, therefore is in the correct section: education 
+gcompris-qt: games-package-should-be-section-games
+
+# Upstream doesn't provide a manpage, stop complaining.
+gcompris-qt: binary-without-manpage usr/games/gcompris-qt

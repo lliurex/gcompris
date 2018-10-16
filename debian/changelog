@@ -1,0 +1,129 @@
+gcompris-qt (0.91-lliurex1) bionic; urgency=medium
+
+  * Bionic backport from cosmic
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Tue, 16 Oct 2018 14:25:53 +0200
+
+gcompris-qt (0.91-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Do not include debian-qt-kde.mk, since rules basically overrides its job.
+  * Fix the dh_auto_configure override, actually calling dh_auto_configure.
+  * Switch the cmake parameter BIN_INSTALL_DIR (deprecated name) to
+    KDE_INSTALL_BINDIR.
+  * Call dh_missing in its own override, instead of the dh_install override.
+  * Add the libkf5doctools-dev build dependency to enable the documentation.
+  * Update install files.
+  * Use /usr/share/dpkg/pkg-info.mk and $(DEB_VERSION) instead of calling
+    dpkg-parsechangelog manually.
+  * Update lintian overrides.
+  * Stop using dh_buildinfo, since it adds little value to the binaries
+    - remove the dh-buildinfo build dependency
+  * Use the kf5 dh addon, mostly to avoid compressing docbook files.
+  * Remove the version from the gcompris-qt recommend in gcompris-qt-data:
+    this version will not be available in case of binNMU, and gcompris-qt
+    enforces already a strict gcompris-qt-data dependency.
+  * Bump Standards-Version to 4.1.4, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 19 May 2018 23:35:47 +0200
+
+gcompris-qt (0.81-2) unstable; urgency=medium
+
+  * Wrap-and-sort.
+  * Move libqt5multimedia5-plugins from Recommends to Depends to ensure
+    that sound always works (Closes: #892464).
+  * Mark gcompris-qt-data as Multi-Arch: foreign.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 10 Mar 2018 20:51:53 -0600
+
+gcompris-qt (0.81-1) unstable; urgency=medium
+
+  [ Rik Mills]
+  * Priority 'extra' deprecated in favour of 'optional'.
+
+  [ Simon Quigley ]
+  * Add my name to Uploaders and move to the Debian Qt/KDE Team umbrella
+    (Closes: #826428).
+  * Add missing runtime dependencies (Closes: #820496, #889672).
+  * Bump debhelper compat to 11.
+  * Bump Standards-version to 4.1.3, no changes needed.
+  * Migrate to using dbgsym packages instead of explicitly defining a -
+    dbg package in debian/control.
+  * Move the Vcs-* links to Salsa.
+
+  [ Sébastien Villemot ]
+  * Complete overhaul of debian/copyright.
+  * Fix versioned Recommends of gcompris-qt-data on gcompris-qt.
+  * Add a transitional "gcompris" package (with an epoch in its version
+    number) to facilitate the transition from older versions to the Qt
+    rewrite. (Closes: #875912)
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Mar 2018 15:13:28 +0100
+
+gcompris-qt (0.81-0ubuntu1) artful; urgency=medium
+
+  * New upstream bugfix release (0.81)
+
+ -- Rik Mills <rikmills@kubuntu.org>  Thu, 28 Sep 2017 15:05:34 +0100
+
+gcompris-qt (0.80-0ubuntu1) artful; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New release
+
+  [ Clive Johnston ]
+  * New release for Ubuntu (Thanks to neon)
+  * New upstream release (0.80)
+
+ -- Clive Johnston <clivejo@kubuntu.org>  Tue, 15 Aug 2017 23:18:26 +0100
+
+gcompris-qt (0.61-1) xenial; urgency=medium
+
+  * Neon fork, new upstream release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 18 Oct 2016 08:32:03 -0700
+
+gcompris-qt (0.50-3) unstable; urgency=medium
+
+  * Complete copyright information.
+  * Removed useless build-dep on qtquick1 (Closes: #824958).
+  * Update debian/watch with filenamemangle.  Still lacks a proper
+    downloadurlmangle, but that should confuse uscan less already.
+
+ -- Yann Dirson <dirson@debian.org>  Sat, 04 Jun 2016 22:29:51 +0200
+
+gcompris-qt (0.50-2) unstable; urgency=medium
+
+  * The "not yet 1500-lines debian/copyright" release.
+  * Added src/activities/instruments/resource/drum_kit.ogg and
+    src/activities/details/details.svg to debian/copyright (spotted by
+    Thorsten Alteholz).  Plus a number of PNG and SVG files containing a
+    public domain notice.
+  * Include upstream patch to support building without qml-box2d, which
+    should be separately packaged before we can properly use it.
+  * Include modification to allow the build to proceed without the
+    qml-box2d submodule source.
+
+ -- Yann Dirson <dirson@debian.org>  Tue, 15 Mar 2016 23:24:36 +0100
+
+gcompris-qt (0.50-1) unstable; urgency=medium
+
+  * New upstream release.
+    * New build-dependency libqt5sensors5-dev.
+    * Update orig-tarball build instructions for qml-box2d submodule.
+    * New GPL-3+ activities.
+    * New CC-0-licensed files from OpenClipart, using copyright text
+      from openclipart2-svg package.
+    * New public-domain chess engine
+    * New paintings CC-BY-SA || GFDL-1.2 || GPLv3 from WebMuseum (despite
+      src/activities/paintings/resource/image/README telling that the
+      WebMuseum license is only GFDL).
+
+ -- Yann Dirson <dirson@debian.org>  Tue, 29 Dec 2015 00:00:37 +0100
+
+gcompris-qt (0.43-1) unstable; urgency=low
+
+  * Initial release (Closes: #778450)
+
+ -- Yann Dirson <dirson@debian.org>  Sat, 17 Oct 2015 22:54:28 +0200

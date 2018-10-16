@@ -1,0 +1,2 @@
+# In the original gcompris package, /usr/share/doc/gcompris was a symlink
+symlink_to_dir /usr/share/doc/gcompris gcompris-data 1:0.81-1~ gcompris
